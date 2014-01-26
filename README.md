@@ -1,4 +1,4 @@
 Autojoin plugin for Pintask
 =======================
 
-Become a card member upon leaving a comment.
+You become a card member upon leaving a comment on http://pintask.me/.
