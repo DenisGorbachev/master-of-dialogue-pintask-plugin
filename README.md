@@ -1,4 +1,4 @@
-pintask-autojoin-plugin
+Autojoin plugin for Pintask
 =======================
 
-Become a card member upon leaving a comment
+Become a card member upon leaving a comment.
