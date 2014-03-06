@@ -1,7 +1,7 @@
-Master of dialogue — a plugin for Pintask
+Master of dialogue
 =======================
 
-You become a card member upon leaving a comment on http://pintask.me/.
+You become a card member upon leaving a comment on [Pintask](http://pintask.me/), the hackable task tracker.
 
 This versatile plugin is only a couple lines of code:
 
