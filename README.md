@@ -8,14 +8,14 @@ This versatile plugin is only a couple lines of code:
 ```coffee
 if !Cards
   throw "Hey, where are my Cards?"
+if !Comments
+  throw "Look, I need those Comments, too!"
 
-Cards.before.update (userId, card, fieldNames, modifier, options) ->
-  if modifier.$set && userId not in card.memberIds
-    for key, value of modifier.$set
-      matches = key.match(/^comments\.(\d+)\.isNew$/)
-      if matches && value == false && card.comments[matches[1]].ownerId == userId
-        modifier.$addToSet = modifier.$addToSet || {}
-        modifier.$addToSet.memberIds = userId
+Comments.after.insert (userId, comment) ->
+  cardId = comment.cardId
+  card = Cards.findOne(cardId)
+  if userId not in card.memberIds
+    Cards.update(cardId, {$addToSet: {memberIds: userId}})
 ```
 
 So easy to make your own plugin ;)
