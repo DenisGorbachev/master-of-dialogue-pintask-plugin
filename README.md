@@ -18,4 +18,6 @@ Comments.after.insert (userId, comment) ->
     Cards.update(cardId, {$addToSet: {memberIds: userId}})
 ```
 
+_This plugin is written in [CoffeeScript](http://coffeescript.org/). Plain old [JS version](https://github.com/DenisGorbachev/master-of-dialogue-pintask-plugin/blob/master/plugin.js) is available, too._
+
 So easy to make your own plugin ;)
